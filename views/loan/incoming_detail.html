@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>借款管理-进件管理-查看详情</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0;ie.html"/>
+    <![endif]-->
+
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="../../static/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="../../static/css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
+    <link href="../../static/css/animate.css" rel="stylesheet">
+    <link href="../../static/css/style.css" rel="stylesheet">
+    <link href="../../static/css/plugins/iCheck/custom.css" rel="stylesheet">
+    <style>
+        .table tr td:first-child {
+            width: 8%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="gray-bg">
+<div class="wrapper-content">
+    <div class="ibox-content">
+        <div class="wrapper-content">
+            <!--  车辆及GPS照片上传  -->
+            <table class="table perfile-table">
+                <tr>
+                    <td>车辆及GPS照片上传</td>
+                    <td colspan="6" class="pd0">
+                        <table class="table perfile-table pd0 mg0">
+                            <tr>
+                                <td>操作员</td>
+                                <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                                <td>操作时间</td>
+                                <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                                <td>已完善</td>
+                                <td class="row">
+                                    <div class="col-sm-4"><input type="radio" class="i-checks" name="input[]"> 是</div>
+                                    <div class="col-sm-4"><input type="radio" class="i-checks" name="input[]"> 否</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="5">上传图片待完善</td>
+                                <td class="text-center"><button type="button" class="btn btn-w-m btn-success">保存</button></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <!--  家访及工作照资料上传  -->
+            <table class="table perfile-table">
+                <tr>
+                    <td>家访及工作照资料上传</td>
+                    <td colspan="6" class="pd0">
+                        <table class="table perfile-table pd0 mg0">
+                            <tr>
+                                <td>操作员</td>
+                                <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                                <td>操作时间</td>
+                                <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                                <td>已完善</td>
+                                <td class="row">
+                                    <div class="col-sm-4"><input type="radio" class="i-checks" name="input[]"> 是</div>
+                                    <div class="col-sm-4"><input type="radio" class="i-checks" name="input[]"> 否</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="5">上传图片待完善</td>
+                                <td class="text-center"><button type="button" class="btn btn-w-m btn-success">保存</button></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <!--  合同及签署照片  -->
+            <table class="table perfile-table">
+                <tr>
+                    <td>合同及签署照片</td>
+                    <td colspan="6" class="pd0">
+                        <table class="table perfile-table pd0 mg0">
+                            <tr>
+                                <td>操作员</td>
+                                <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                                <td>操作时间</td>
+                                <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                                <td>已完善</td>
+                                <td class="row">
+                                    <div class="col-sm-4"><input type="radio" class="i-checks" name="input[]"> 是</div>
+                                    <div class="col-sm-4"><input type="radio" class="i-checks" name="input[]"> 否</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="5">上传图片待完善</td>
+                                <td class="text-center"><button type="button" class="btn btn-w-m btn-success">保存</button></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- 全局js -->
+<script src="../../static/js/jquery.min.js?v=2.1.4"></script>
+<script src="../../static/js/bootstrap.min.js?v=3.3.6"></script>
+<!-- radio/checkbox效果需要引入开始 -->
+<!-- iCheck -->
+<script src="../../static/js/plugins/iCheck/icheck.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.i-checks').iCheck({
+            checkboxClass: 'icheckbox_square-green',
+            radioClass: 'iradio_square-green'
+        });
+        $('.divide-ml15 > .iradio_square-green').css('margin-left','15px');
+        /*$('input').attr("disabled",true);
+        $('textarea').attr("disabled",true);*/
+    });
+</script>
+<!-- radio/checkbox效果需要引入结束 -->
+</body>
+</html>

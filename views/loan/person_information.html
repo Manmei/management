@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>借款管理-信用评估-个人信息</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0;ie.html"/>
+    <![endif]-->
+
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="../../static/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="../../static/css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
+    <link href="../../static/css/animate.css" rel="stylesheet">
+    <link href="../../static/css/style.css" rel="stylesheet">
+    <link href="../../static/css/plugins/iCheck/custom.css" rel="stylesheet">
+</head>
+<body class="gray-bg">
+<div class="wrapper-content">
+    <div class="ibox-content">
+        <div class="ibox-title">
+            <span class="pull-right">推广员：王某某</span>
+            <h5>个人信息</h5>
+        </div>
+       <div class="wrapper-content">
+           <table class="table table-hover perfile-table">
+               <tr>
+                   <td>姓名</td>
+                   <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                   <td>性别</td>
+                   <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                   <td>出生年月</td>
+                   <td><input name="name" minlength="2" type="text" class="form-control"></td>
+               </tr>
+               <tr>
+                   <td>民族</td>
+                   <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                   <td>学历</td>
+                   <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                   <td>婚姻状况</td>
+                   <td>
+                       <div class="btn-group select-menu-width">
+                           <button data-toggle="dropdown" class="btn btn-primary btn-sm dropdown-toggle">未婚<span class="caret"></span>
+                           </button>
+                           <ul class="dropdown-menu">
+                               <li><a href="javascript:;">未婚</a></li>
+                               <li><a href="javascript:;">已婚未育</a></li>
+                               <li><a href="javascript:;">已婚已育</a></li>
+                               <li><a href="javascript:;">离异</a></li>
+                               <li><a href="javascript:;">其他</a></li>
+                           </ul>
+                        </div>
+                   </td>
+               </tr>
+               <tr>
+                   <td>籍贯</td>
+                   <td colspan="3"><input name="name" minlength="2" type="text" class="form-control"></td>
+                   <td>生育状况</td>
+                   <td><div class="btn-group select-menu-width">
+                       <button data-toggle="dropdown" class="btn btn-primary btn-sm dropdown-toggle">未婚<span class="caret"></span>
+                       </button>
+                       <ul class="dropdown-menu">
+                           <li><a href="javascript:;">未婚</a></li>
+                           <li><a href="javascript:;">已婚未育</a></li>
+                           <li><a href="javascript:;">已婚已育</a></li>
+                           <li><a href="javascript:;">离异</a></li>
+                           <li><a href="javascript:;">其他</a></li>
+                       </ul>
+                   </div></td>
+               </tr>
+               <tr>
+                   <td>家庭住址</td>
+                   <td colspan="5"><input name="name" minlength="2" type="text" class="form-control"></td>
+               </tr>
+               <tr>
+                   <td>现住址</td>
+                   <td colspan="5"><input name="name" minlength="2" type="text" class="form-control"></td>
+               </tr>
+               <tr>
+                   <td>身份证</td>
+                   <td colspan="5">
+                       <div class="row">
+                           <div class="col-sm-6 text-center"><img class="space-20" src="../../static/img/a1.jpg" alt=""></div>
+                           <div class="col-sm-6 text-center"><img class="space-20" src="../../static/img/a3.jpg" alt=""></div>
+                       </div>
+                   </td>
+               </tr>
+               <tr>
+                   <td>运营商认证</td>
+                   <td colspan="5"></td>
+               </tr>
+               </tbody>
+           </table>
+           <h3>征信报告</h3>
+           <table class="table table-hover perfile-table text-center">
+               <tr>
+                   <td>机审</td>
+                   <td>通过/拒绝/理由</td>
+                   <td><button type="button" class="btn btn-primary btn-sm">查看详情</button></td>
+               </tr>
+           </table>
+           <div class="row wrapper" style="line-height: 30px;">
+               <div class="col-sm-1"><input type="radio" class="i-checks" name="input[]"> 拒绝</div>
+               <div class="col-sm-1"><input type="radio" class="i-checks" name="input[]"> 通过</div>
+               <div class="col-sm-2"><button type="button" class="btn btn-primary btn-sm">重置结果</button></div>
+               <div class="col-sm-8"></div>
+           </div>
+           <div class="wrapper social-comment">
+               <div class="row">
+                   <div class="col-sm-6">
+                       <textarea class="form-control" placeholder="请在此处填写备注信息..."></textarea>
+                   </div>
+                   <div class="col-sm-2">
+                       <button style="margin-top: 7px" type="button" class="btn btn-primary btn-sm">提交</button>
+                   </div>
+                   <div class="col-sm-2"></div>
+               </div>
+           </div>
+       </div>
+    </div>
+</div>
+
+<!-- 全局js -->
+<script src="../../static/js/jquery.min.js?v=2.1.4"></script>
+<script src="../../static/js/bootstrap.min.js?v=3.3.6"></script>
+    <!-- radio/checkbox效果需要引入开始 -->
+    <!-- iCheck -->
+    <script src="../../static/js/plugins/iCheck/icheck.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green'
+            });
+        });
+    </script>
+    <!-- radio/checkbox效果需要引入结束 -->
+</body>
+</html>

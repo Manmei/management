@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>借款管理-总部审核-详情页</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0;ie.html"/>
+    <![endif]-->
+
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="../../static/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="../../static/css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
+    <link href="../../static/css/animate.css" rel="stylesheet">
+    <link href="../../static/css/style.css" rel="stylesheet">
+    <link href="../../static/css/plugins/iCheck/custom.css" rel="stylesheet">
+    <style>
+        .table tr td:first-child {
+            width: 8%;
+            text-align: center;
+        }
+        .estate-detail-table tr td:first-child {
+            width: 160px;
+        }
+    </style>
+</head>
+<body class="gray-bg">
+<div class="wrapper-content">
+    <div class="ibox-content">
+        <div class="wrapper-content">
+            <table class="table perfile-table">
+                <tr>
+                    <td rowspan="5">借款人</td>
+                    <td class="text-center">姓名</td>
+                    <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                    <td>性别</td>
+                    <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                    <td>出生年月</td>
+                    <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                    <td>电话号码</td>
+                    <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>民族</td>
+                    <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                    <td>学历</td>
+                    <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                    <td>婚姻状况</td>
+                    <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                    <td>生育状况</td>
+                    <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>身份证号</td>
+                    <td colspan="3"><input name="name" minlength="2" type="text" class="form-control"></td>
+                    <td>籍贯</td>
+                    <td colspan="3"><input name="name" minlength="2" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>家庭住址</td>
+                    <td colspan="3"><input name="name" minlength="2" type="text" class="form-control"></td>
+                    <td>现住址</td>
+                    <td colspan="3"><input name="name" minlength="2" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td colspan="8">
+                        <div class="row">
+                            <div class="col-sm-6 text-center">
+                                <img class="space-20" src="../../static/img/a1.jpg" alt="">
+                                <p>身份证正面</p>
+                            </div>
+                            <div class="col-sm-6 text-center">
+                                <img class="space-20" src="../../static/img/a3.jpg" alt="">
+                                <p>身份证反面</p>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <!--借款信息-->
+            <table class="table perfile-table">
+                <tr>
+                    <td rowspan="2">借款信息</td>
+                    <td class="text-center">申请类型</td>
+                    <td colspan="3"><input name="name" minlength="2" type="text" class="form-control"></td>
+                    <td>预期借款金额/期限</td>
+                    <td colspan="3"><input name="name" minlength="2" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>资金用途</td>
+                    <td colspan="7"><textarea style="width: 36.63%;" class="form-control" placeholder="请在此处填写资金用途..."></textarea></td>
+                </tr>
+            </table>
+            <!--催收管理 借款信息-->
+            <table class="table perfile-table">
+                <tr>
+                    <td rowspan="2">借款信息</td>
+                    <td>欠款金额</td>
+                    <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                    <td>欠款本金</td>
+                    <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                    <td>逾期天数</td>
+                    <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                    <td>逾期滞纳金</td>
+                    <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>已还金额</td>
+                    <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                    <td>已还期数</td>
+                    <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                    <td>待还期数</td>
+                    <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                    <td>减免金额</td>
+                    <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                </tr>
+            </table>
+            <!--担保人-->
+            <table class="table perfile-table">
+                <tr>
+                    <td rowspan="2">担保人</td>
+                    <td class="text-center">姓名</td>
+                    <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                    <td>性别</td>
+                    <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                    <td>婚否</td>
+                    <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                    <td>电话</td>
+                    <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>资料是否齐全</td>
+                    <td colspan="3"><textarea  rows="5" class="form-control" placeholder="请在此处填写备注..."></textarea></td>
+                    <td colspan="4">
+                        <div class="text-center">
+                            <img style="margin: 0 auto;" alt="image" class="m-t-xs img-responsive" src="../../static/img/a2.jpg">
+                            <div class="m-t-xs font-bold">担保人资料上传</div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <!--配偶-->
+            <table class="table perfile-table">
+                <tr>
+                    <td rowspan="3">配偶</td>
+                    <td class="text-center">姓名</td>
+                    <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                    <td>联系电话</td>
+                    <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                    <td>身份证号</td>
+                    <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>民族</td>
+                    <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                    <td>学历</td>
+                    <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                    <td class="text-center">工作单位</td>
+                    <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>单位电话</td>
+                    <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                    <td>入职年限</td>
+                    <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                    <td>单位地址</td>
+                    <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                </tr>
+            </table>
+            <!--联系人信息-->
+            <table class="table perfile-table">
+                <tr>
+                    <td rowspan="3">联系人信息</td>
+                    <td colspan="2" class="text-center">姓名</td>
+                    <td colspan="2">关系</td>
+                    <td colspan="2">联系电话</td>
+                    <td colspan="2">家庭住址/工作单位</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input name="name" minlength="2" type="text" class="form-control"></td>
+                    <td colspan="2"><input name="name" minlength="2" type="text" class="form-control"></td>
+                    <td colspan="2"><input name="name" minlength="2" type="text" class="form-control"></td>
+                    <td colspan="2"><input name="name" minlength="2" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input name="name" minlength="2" type="text" class="form-control"></td>
+                    <td colspan="2"><input name="name" minlength="2" type="text" class="form-control"></td>
+                    <td colspan="2"><input name="name" minlength="2" type="text" class="form-control"></td>
+                    <td colspan="2"><input name="name" minlength="2" type="text" class="form-control"></td>
+                </tr>
+            </table>
+            <!--工作信息-->
+            <table class="table perfile-table">
+                <tr>
+                    <td rowspan="3">工作信息</td>
+                    <td>工作单位</td>
+                    <td colspan="3"><input name="name" minlength="2" type="text" class="form-control"></td>
+                    <td>单位地址</td>
+                    <td colspan="3"><input name="name" minlength="2" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>职位</td>
+                    <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                    <td>月收入</td>
+                    <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                    <td>单位电话</td>
+                    <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                    <td>入职年限</td>
+                    <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>工作情况</td>
+                    <td colspan="7"><textarea rows="3" class="form-control w45" placeholder="请在此处填写备注..."></textarea></td>
+                </tr>
+            </table>
+            <!--房产信息-->
+            <table class="table perfile-table">
+                <tr>
+                    <td rowspan="4">房产信息</td>
+                    <td colspan="8">
+                        <table class="table perfile-table estate-detail-table pd0">
+                            <tr>
+                                <td>房产地址</td>
+                                <td colspan="7"><input name="name" minlength="2" type="text" class="form-control w45"></td>
+                            </tr>
+                            <tr>
+                                <td>面积</td>
+                                <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                                <td>购买时间</td>
+                                <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                                <td>购买金额</td>
+                                <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                                <td>共有人情况</td>
+                                <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                            </tr>
+                            <tr>
+                                <td>贷款情况</td>
+                                <td colspan="3"><input name="name" minlength="2" type="text" class="form-control"></td>
+                                <td>贷款银行</td>
+                                <td colspan="3"><input name="name" minlength="2" type="text" class="form-control"></td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">居住地址</td>
+                                <td colspan="7"><input name="name" minlength="2" type="text" class="form-control w45" placeholder="租用"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="7"><input name="name" minlength="2" type="text" class="form-control w45" placeholder="自购（或亲属名下）"></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+            </table>
+            <!--车辆信息-->
+            <table class="table perfile-table">
+                <tr>
+                    <td rowspan="2">车辆信息</td>
+                    <td class="text-center">车辆牌号</td>
+                    <td colspan="2"><input name="name" minlength="2" type="text" class="form-control"></td>
+                    <td>全款按揭</td>
+                    <td colspan="3" class="row">
+                        <div class="col-sm-3"><input type="radio" class="i-checks" name="input[]">全款</div>
+                        <div class="col-sm-3"><input type="radio" class="i-checks" name="input[]">按揭</div>
+                        <div class="col-sm-3"><input type="radio" class="i-checks" name="input[]">抵押</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>车辆型号</td>
+                    <td colspan="2"><input name="name" minlength="2" type="text" class="form-control"></td>
+                    <td>购买日期</td>
+                    <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                    <td>新车价格</td>
+                    <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                </tr>
+            </table>
+            <!-- 催收记录 -->
+            <table class="table perfile-table">
+                <tr>
+                    <td rowspan="3">催收记录</td>
+                    <td>添加时间</td>
+                    <td>操作员</td>
+                    <td>资料备注</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td class="row">
+                        <div class="col-md-5"><textarea rows="3" class="form-control w45" placeholder="请在此处填写..."></textarea></div>
+                        <div class="col-md-7">
+                            上传图片
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td class="row">
+                        <div class="col-md-5"><textarea rows="3" class="form-control w45" placeholder="请在此处填写..."></textarea></div>
+                        <div class="col-md-7">
+                            上传图片
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <div class="row text-center space-20">
+                <button type="button" class="btn btn-w-m btn-success">添加催收记录</button>
+            </div>
+
+            <!--其他资料-->
+            <table class="table perfile-table">
+                <tr>
+                    <td rowspan="2">其他资料</td>
+                    <td class="text-center">公积金账号</td>
+                    <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>其他资料</td>
+                    <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                </tr>
+            </table>
+            <!--借款人资产-->
+            <table class="table perfile-table">
+                <tr>
+                    <td rowspan="3">借款人资产</td>
+                    <td>房产、车辆</td>
+                    <td colspan="2" class="text-center">抵押</td>
+                </tr>
+                <tr>
+                    <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                    <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                    <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                    <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                    <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                </tr>
+            </table>
+            <!--同类公司借款-->
+            <table class="table perfile-table">
+                <tr>
+                    <td rowspan="3">同类公司借款</td>
+                    <td>贷款种类</td>
+                    <td>贷款额度</td>
+                    <td>贷款到期时间</td>
+                    <td>每月还款度</td>
+                    <td>每月还款方式</td>
+                    <td>逾期情况说明</td>
+                </tr>
+                <tr>
+                    <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                    <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                    <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                    <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                    <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                    <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                    <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                    <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                    <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                    <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                    <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                </tr>
+            </table>
+            <table class="table perfile-table">
+                <tr>
+                    <td class="text-center width8">借款人及配偶收入情况说明</td>
+                    <td colspan="2"><textarea rows="3" class="form-control w45" placeholder="请在此处填写..."></textarea></td>
+                </tr>
+                <tr>
+                    <td class="text-center width8">下户情况借款用途</td>
+                    <td colspan="2"><textarea rows="3" class="form-control w45" placeholder="请在此处填写..."></textarea></td>
+                </tr>
+                <tr>
+                    <td class="text-center width8">借款用途及还款来源</td>
+                    <td><input name="name" minlength="2" type="text" class="form-control" style="width: 91.3%;"></td>
+                    <td><input name="name" minlength="2" type="text" class="form-control" style="width: 91.3%;"></td>
+                </tr>
+                <tr>
+                    <td class="text-center width8">绑定银行卡</td>
+                    <td colspan="2"><textarea rows="3" class="form-control w45" placeholder="请在此处填写..."></textarea></td>
+                </tr>
+            </table>
+            <!--面审结果意见-->
+            <table class="table perfile-table">
+                <tr>
+                    <td rowspan="3">面审结果意见</td>
+                    <td class="text-center">审核员</td>
+                    <td><input name="name" minlength="2" type="text" class="form-control"></td>
+                    <td>审核时间</td>
+                    <td><textarea rows="3" class="form-control w45" placeholder="请在此处填写备注..."></textarea></td>
+                </tr>
+                <tr>
+                    <td>结果建议</td>
+                    <td colspan="3" class="row" style="line-height: 50px;">
+                        <div class="col-sm-1"><input type="radio" class="i-checks" name="input[]"> 拒绝</div>
+                        <div class="col-sm-1"><input type="radio" class="i-checks" name="input[]"> 通过</div>
+                        <div class="col-sm-3">借款金额：<input name="name" minlength="2" type="text" class="form-control disInline w70"></div>
+                        <div class="col-sm-3">借款周期：<input name="name" minlength="2" type="text" class="form-control disInline w70"></div>
+                        <div class="col-sm-4 divide-ml15">还款方式：<input type="radio" class="i-checks ml10" name="input[]">等额分<input type="radio" class="i-checks ml10" name="input[]">不分</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4"><textarea rows="3" class="form-control w45" placeholder="请在此处填写备注..."></textarea></td>
+                </tr>
+            </table>
+            <table class="table perfile-table">
+                <td class="row">
+                    <div class="col-sm-4">
+                        <div class="text-center">
+                            <img style="margin: 0 auto;" alt="image" class="m-t-xs img-responsive" src="../../static/img/a2.jpg">
+                            <div class="m-t-xs font-bold">车辆照片</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="text-center">
+                            <img style="margin: 0 auto;" alt="image" class="m-t-xs img-responsive" src="../../static/img/a2.jpg">
+                            <div class="m-t-xs font-bold">家访、工作访</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="text-center">
+                            <img style="margin: 0 auto;" alt="image" class="m-t-xs img-responsive" src="../../static/img/a2.jpg">
+                            <div class="m-t-xs font-bold">合同及签署照</div>
+                        </div>
+                    </div>
+                </td>
+            </table>
+            <!-- 门店经理复核  -->
+            <table class="table perfile-table">
+                <tr>
+                    <td rowspan="2" style="width: 0.55%;">门店经理复核</td>
+                    <td class="row">
+                        <div class="col-sm-2"><input type="radio" class="i-checks" name="input[]"> 拒绝</div>
+                        <div class="col-sm-2"><input type="radio" class="i-checks" name="input[]"> 通过</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><textarea rows="3" class="form-control" style="width: 37.5%;" placeholder="请在此处填写备注信息..."></textarea></td>
+                </tr>
+            </table>
+            <!-- 门店经理复核完成状态  -->
+            <table class="table perfile-table">
+                <tr>
+                    <td rowspan="2" style="width: 0.55%;">门店经理复核</td>
+                    <td>审核员</td>
+                    <td><input name="name" minlength="2" type="text" class="form-control w70"></td>
+                    <td>提交时间</td>
+                    <td><input name="name" minlength="2" type="text" class="form-control w70"></td>
+                </tr>
+                <tr>
+                    <td colspan="4"><textarea rows="3" class="form-control" style="width: 37.5%;" placeholder="请在此处填写备注信息..."></textarea></td>
+                </tr>
+            </table>
+            <!--  总部审批  -->
+            <table class="table perfile-table">
+                <tr>
+                    <td rowspan="2" style="width: 0.53%;">总部审批</td>
+                    <td>结果建议</td>
+                    <td class="row">
+                        <div class="col-sm-2"><input type="radio" class="i-checks" name="input[]"> 拒绝</div>
+                        <div class="col-sm-2"><input type="radio" class="i-checks" name="input[]"> 通过</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><textarea rows="3" class="form-control" style="width: 37.5%;" placeholder="请在此处填写备注信息..."></textarea></td>
+                </tr>
+            </table>
+            <!--  总部审批完成状态  -->
+            <table class="table perfile-table">
+                <tr>
+                    <td rowspan="2" style="width: 0.55%;">总部驳回</td>
+                    <td>审核员</td>
+                    <td><input name="name" minlength="2" type="text" class="form-control w70"></td>
+                    <td>提交时间</td>
+                    <td><input name="name" minlength="2" type="text" class="form-control w70"></td>
+                </tr>
+                <tr>
+                    <td colspan="4"><textarea rows="3" class="form-control" style="width: 37.5%;" placeholder="请在此处填写备注信息..."></textarea></td>
+                </tr>
+            </table>
+
+            <div class="row text-center">
+                <button type="button" class="btn btn-w-m btn-success">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 全局js -->
+<script src="../../static/js/jquery.min.js?v=2.1.4"></script>
+<script src="../../static/js/bootstrap.min.js?v=3.3.6"></script>
+
+<!-- radio/checkbox效果需要引入开始 -->
+<!-- iCheck -->
+<script src="../../static/js/plugins/iCheck/icheck.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.i-checks').iCheck({
+            checkboxClass: 'icheckbox_square-green',
+            radioClass: 'iradio_square-green'
+        });
+        $('.divide-ml15 > .iradio_square-green').css('margin-left','15px');
+        /*$('input').attr("disabled",true);
+        $('textarea').attr("disabled",true);*/
+    });
+</script>
+<!-- radio/checkbox效果需要引入结束 -->
+</body>
+</html>

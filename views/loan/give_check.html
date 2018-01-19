@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>借款管理-进件管理-放款审核</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0;ie.html"/>
+    <![endif]-->
+
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="../../static/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="../../static/css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
+    <link href="../../static/css/animate.css" rel="stylesheet">
+    <link href="../../static/css/style.css" rel="stylesheet">
+    <link href="../../static/css/plugins/iCheck/custom.css" rel="stylesheet">
+</head>
+<body class="gray-bg">
+<div class="wrapper-content">
+    <div class="ibox-content">
+        <div class="ibox-title">
+            <h5>个人资料</h5>
+        </div>
+        <div class="wrapper-content">
+            <table class="table perfile-table">
+                <tr>
+                    <td>身份证</td>
+                    <td colspan="4">
+                        <div class="row">
+                            <div class="col-sm-6 text-center"><img class="space-20" src="../../static/img/a1.jpg" alt=""></div>
+                            <div class="col-sm-6 text-center"><img class="space-20" src="../../static/img/a3.jpg" alt=""></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="2">银行卡信息</td>
+                    <td>种类</td>
+                    <td colspan="2"></td>
+                    <td>添加时间</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>卡号</td>
+                    <td colspan="2"></td>
+                    <td>预留手机号</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>合同信息</td>
+                    <td colspan="4">
+                        展示合同照片，横向瀑布流展示，可左右滑动，点击之后放大
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5" class="row">
+                        <div class="col-sm-2">借款金额：</div>
+                        <div class="col-sm-2">借款周期：</div>
+                        <div class="col-sm-4 divide-ml15">还款方式：<input type="radio" class="i-checks ml10" name="input[]">等额分<input type="radio" class="i-checks ml10" name="input[]">不分</div>
+                    </td>
+                </tr>
+            </table>
+
+            <table class="table perfile-table">
+                <tr>
+                    <td rowspan="2">总部审批</td>
+                    <td>审核员</td>
+                    <td></td>
+                    <td>审核时间</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="4" class="text-center">备注</td>
+                </tr>
+            </table>
+            <div class="row wrapper">
+                <div class="col-sm-1"><input type="radio" class="i-checks" name="input[]"> 放款</div>
+                <div class="col-sm-1"><input type="radio" class="i-checks" name="input[]"> 驳回</div>
+                <div class="col-sm-8"></div>
+            </div>
+            <div class="wrapper social-comment">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <textarea class="form-control" placeholder="请在此处填写备注信息..."></textarea>
+                    </div>
+                    <div class="col-sm-2">
+                        <button style="margin-top: 7px" type="button" class="btn btn-primary btn-sm">保存</button>
+                    </div>
+                    <div class="col-sm-2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 全局js -->
+<script src="../../static/js/jquery.min.js?v=2.1.4"></script>
+<script src="../../static/js/bootstrap.min.js?v=3.3.6"></script>
+<!-- radio/checkbox效果需要引入开始 -->
+<!-- iCheck -->
+<script src="../../static/js/plugins/iCheck/icheck.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.i-checks').iCheck({
+            checkboxClass: 'icheckbox_square-green',
+            radioClass: 'iradio_square-green'
+        });
+        $('.divide-ml15 > .iradio_square-green').css('margin-left','15px')
+    });
+</script>
+<!-- radio/checkbox效果需要引入结束 -->
+</body>
+</html>

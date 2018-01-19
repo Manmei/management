@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>系统管理-角色管理</title>
+
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0;ie.html" />
+    <![endif]-->
+
+    <link rel="shortcut icon" href="favicon.ico"> <link href="../../static/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="../../static/css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
+    <link href="../../static/css/animate.css" rel="stylesheet">
+    <link href="../../static/css/style.css?v=4.1.0" rel="stylesheet">
+    <link href="../../static/css/plugins/iCheck/custom.css" rel="stylesheet">
+</head>
+<body class="gray-bg">
+    <div class="g-role wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <div class="row funciton-btn">
+                            <button id="add_role" type="button" class="btn btn-primary">添加角色</button>
+                            <button type="button" class="btn btn-success">修改角色</button>
+                            <button type="button" class="btn btn-info">删除角色</button>
+                            <button type="button" class="btn btn-warning">角色授权</button>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <table class="table table-striped">
+                            <thead>
+                            <tr>
+                                <th></th>
+                                <th>序号</th>
+                                <th>角色名称</th>
+                                <th>角色描述</th>
+                                <th>添加时间</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <input type="radio" class="i-checks" name="input[]">
+                                </td>
+                                <td>1</td>
+                                <td><span class="pie">门店经理</span></td>
+                                <td>门店经理</td>
+                                <td>2014.11.11</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="radio" class="i-checks" name="input[]">
+                                </td>
+                                <td>1</td>
+                                <td><span class="pie">门店经理</span></td>
+                                <td>门店经理</td>
+                                <td>2014.11.11</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="radio" class="i-checks" name="input[]">
+                                </td>
+                                <td>1</td>
+                                <td><span class="pie">门店经理</span></td>
+                                <td>门店经理</td>
+                                <td>2014.11.11</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="radio" class="i-checks" name="input[]">
+                                </td>
+                                <td>1</td>
+                                <td><span class="pie">门店经理</span></td>
+                                <td>门店经理</td>
+                                <td>2014.11.11</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 添加用户弹窗 表单 -->
+    <div class="add_role_popup" style="display: none">
+        <form class="role_popup form-horizontal m-t" id="commentForm">
+            <div class="row">
+                <div class="col-sm-10">
+                    <div class="form-group">
+                        <label class="col-sm-5 control-label">角色名称：</label>
+                        <div class="col-sm-7">
+                            <input id="cname" name="name" minlength="2" type="text" class="form-control" required="required" aria-required="true">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-5 control-label"><i class="icon-required">*</i>上级角色：</label>
+                        <div class="col-sm-7">
+                            <div class="btn-group select-menu-width">
+                                <button data-toggle="dropdown" class="btn btn-primary btn-sm dropdown-toggle">操作 <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="javascript:;">全部</a></li>
+                                    <li><a href="javascript:;">待机审</a></li>
+                                    <li><a href="javascript:;">初审通过/待复审</a></li>
+                                    <li><a href="javascript:;">初审驳回</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-5 control-label"><i class="icon-required">*</i>角色描述：</label>
+                        <div class="col-sm-7">
+                            <textarea id="ccomment" name="comment" class="form-control" required="" aria-required="true"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-6 col-sm-offset-6">
+                    <button class="btn btn-primary" type="submit">保存</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+    <!-- 全局js -->
+    <script src="../../static/js/jquery.min.js?v=2.1.4"></script>
+    <script src="../../static/js/bootstrap.min.js?v=3.3.6"></script>
+
+    <!-- radio/checkbox效果需要引入开始 -->
+    <!-- iCheck单选框/多选框 -->
+    <script src="../../static/js/plugins/iCheck/icheck.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+            });
+        });
+    </script>
+    <!-- 弹窗插件 -->
+    <script src="../../static/js/plugins/layer/layer.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var _add_role_html = $('.add_role_popup').html();
+        $('#add_role').on('click', function(){
+            layer.open({
+                title: "添加角色",
+                type: 1,
+                area: ['600px', 'auto'],
+                skin: 'layui-layer-demo', //样式类名
+                anim: 2,
+                shadeClose: true, //开启遮罩关闭
+                content: _add_role_html
+            });
+        });
+    </script>
+    <!--  表单插件  -->
+    <!-- jQuery Validation plugin javascript-->
+    <script src="../../static/js/plugins/validate/jquery.validate.min.js"></script>
+    <script src="../../static/js/plugins/validate/messages_zh.min.js"></script>
+    <script src="../../static/js/demo/form-validate-demo.js"></script>
+</body>
+</html>

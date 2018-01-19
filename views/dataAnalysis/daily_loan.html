@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据分析-财务数据-每日放款数据</title>
+
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0;ie.html" />
+    <![endif]-->
+
+    <link rel="shortcut icon" href="favicon.ico"> <link href="../../static/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="../../static/css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
+    <link href="../../static/css/animate.css" rel="stylesheet">
+    <link href="../../static/css/style.css?v=4.1.0" rel="stylesheet">
+    <link href="../../static/css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="../../static/css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+</head>
+<body class="gray-bg">
+<div class="g-role wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <div class="row wrapper clearfix">
+                        <div class="fl clearfix">
+                            <span class="fl" style="margin-top: 7px;margin-right: 10px;">开始时间</span>
+                            <div class="input-daterange input-group fl">
+                                <input style="width:120px" type="text" class="input-sm form-control select_date date_begin" name="start" value="2014-11-11" />
+                                <span style="width: auto" class="input-group-addon">至</span>
+                                <input style="width:120px" type="text" class="input-sm form-control select_date date_end" name="end" value="2014-11-17" />
+                            </div>
+                        </div>
+                        <div class="fl m-l-lg">
+                            <span>状态：</span>
+                            <div class="btn-group select-menu-width">
+                                <button data-toggle="dropdown" class="btn btn-primary btn-sm dropdown-toggle"><span class="true_val">全部</span> <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="javascript:;">全部</a></li>
+                                    <li><a href="javascript:;">待机审</a></li>
+                                    <li><a href="javascript:;">初审通过/待复审</a></li>
+                                    <li><a href="javascript:;">初审驳回</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="fl m-l-lg">
+                            <span>门店：</span>
+                            <div class="btn-group select-menu-width">
+                                <button data-toggle="dropdown" class="btn btn-primary btn-sm dropdown-toggle"><span class="true_val">全部</span> <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="javascript:;">全部</a></li>
+                                    <li><a href="javascript:;">待还款</a></li>
+                                    <li><a href="javascript:;">已逾期</a></li>
+                                    <li><a href="javascript:;">部分还款</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="fr text-right">
+                            <button type="button" class="btn btn-primary">查询</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="ibox-content">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th></th>
+                            <th>序号</th>
+                            <th>日期</th>
+                            <th>申请人数</th>
+                            <th>初审通过人数</th>
+                            <th>初审通过率</th>
+                            <th>门店复审通过人数</th>
+                            <th>门店复审通过率</th>
+                            <th>总部审批通过人数</th>
+                            <th>总部审批通过率</th>
+                            <th>放款成功人数</th>
+                            <th>放款率</th>
+                            <th>放款总金额</th>
+                            <th>门店</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <input type="radio" class="i-checks" name="input[]">
+                            </td>
+                            <td>011081</td>
+                            <td><span class="pie">门店经理</span></td>
+                            <td>门店公司名称公司名称经理</td>
+                            <td>0571-2601-2222</td>
+                            <td>否</td>
+                            <td>2014.11.11</td>
+                            <td><span class="pie">门店门店名称门店名称</span></td>
+                            <td>011081</td>
+                            <td>门店公司名称公司名称经理</td>
+                            <td>0571-2601-2222</td>
+                            <td>否</td>
+                            <td>2014.11.11</td>
+                            <td>门店公司名称公司名称经理</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="radio" class="i-checks" name="input[]">
+                            </td>
+                            <td>011081</td>
+                            <td><span class="pie">门店经理</span></td>
+                            <td>门店公司名称公司名称经理</td>
+                            <td>0571-2601-2222</td>
+                            <td>否</td>
+                            <td>2014.11.11</td>
+                            <td><span class="pie">门店门店名称门店名称</span></td>
+                            <td>011081</td>
+                            <td>门店公司名称公司名称经理</td>
+                            <td>0571-2601-2222</td>
+                            <td>否</td>
+                            <td>2014.11.11</td>
+                            <td>门店公司名称公司名称经理</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="radio" class="i-checks" name="input[]">
+                            </td>
+                            <td>011081</td>
+                            <td><span class="pie">门店经理</span></td>
+                            <td>门店公司名称公司名称经理</td>
+                            <td>0571-2601-2222</td>
+                            <td>否</td>
+                            <td>2014.11.11</td>
+                            <td><span class="pie">门店门店名称门店名称</span></td>
+                            <td>011081</td>
+                            <td>门店公司名称公司名称经理</td>
+                            <td>0571-2601-2222</td>
+                            <td>否</td>
+                            <td>2014.11.11</td>
+                            <td>门店公司名称公司名称经理</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="radio" class="i-checks" name="input[]">
+                            </td>
+                            <td>011081</td>
+                            <td><span class="pie">门店经理</span></td>
+                            <td>门店公司名称公司名称经理</td>
+                            <td>0571-2601-2222</td>
+                            <td>否</td>
+                            <td>2014.11.11</td>
+                            <td><span class="pie">门店门店名称门店名称</span></td>
+                            <td>011081</td>
+                            <td>门店公司名称公司名称经理</td>
+                            <td>0571-2601-2222</td>
+                            <td>否</td>
+                            <td>2014.11.11</td>
+                            <td>门店公司名称公司名称经理</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 全局js -->
+<script src="../../static/js/jquery.min.js?v=2.1.4"></script>
+<script src="../../static/js/bootstrap.min.js?v=3.3.6"></script>
+
+<!-- radio/checkbox效果需要引入开始 -->
+<!-- iCheck -->
+<script src="../../static/js/plugins/iCheck/icheck.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.i-checks').iCheck({
+            checkboxClass: 'icheckbox_square-green',
+            radioClass: 'iradio_square-green',
+        });
+    });
+</script>
+<!-- radio/checkbox效果需要引入结束 -->
+
+<!--  日期选择插件start  -->
+<script src="../../static/js/plugins/datapicker/bootstrap-datepicker.js"></script>
+<!--  日期选择插件end  -->
+
+<!-- 自定义公共js文件 -->
+<script src="../../static/js/global-1.1.0.min.js"></script>
+</body>
+</html>
