@@ -16,9 +16,10 @@
     <link href="../../static/css/animate.css" rel="stylesheet">
     <link href="../../static/css/style.css?v=4.1.0" rel="stylesheet">
     <link href="../../static/css/plugins/iCheck/custom.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../../static/css/plugins/webuploader/webuploader.css">
     <!-- datepicker3 -->
     <link href="../../static/css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../static/css/plugins/webuploader/webuploader.css">
+    <link rel="stylesheet" type="text/css" href="../../static/css/demo/webuploader-support.css">
 </head>
 <body class="gray-bg">
 <div class="g-role wrapper-content animated fadeInRight">
@@ -28,7 +29,7 @@
                 <div class="ibox-title">
                     <div class="row wrapper clearfix">
                         <div class="fl clearfix">
-                            <span class="fl" style="margin-top: 7px;margin-right: 10px;">派单时间</span>
+                            <span class="fl" style="margin-top: 7px;margin-right: 10px;">逾期时间</span>
                             <div class="input-daterange input-group fl">
                                 <input style="width:120px" type="text" class="input-sm form-control select_date date_begin" name="start" value="2017-12-31" />
                                 <span style="width: auto" class="input-group-addon">至</span>
@@ -36,11 +37,11 @@
                             </div>
                         </div>
                         <div class="fl clearfix m-l-md">
-                            <span class="fl" style="margin-top: 7px;margin-right: 10px;">还款时间</span>
+                            <span class="fl" style="margin-top: 7px;margin-right: 10px;">逾期天数</span>
                             <div class="input-daterange input-group fl">
-                                <input style="width:120px" type="text" class="input-sm form-control select_date date_begin" name="start" value="2014-11-11" />
+                                <input style="width: 160px;" type="email" placeholder="" class="form-control">
                                 <span style="width: auto" class="input-group-addon">至</span>
-                                <input style="width:120px" type="text" class="input-sm form-control select_date date_begin" name="end" value="2014-11-17" />
+                                <input style="width: 160px;" type="email" placeholder="" class="form-control">
                             </div>
                         </div>
                         <div class="fl">
@@ -58,7 +59,7 @@
                         <button type="button" class="fr btn btn-primary m-l-lg">查询</button>
 
                         <div class="fr clearfix">
-                            <span class="m-l-lg">催收状态：</span>
+                            <span class="m-l-md">催收状态：</span>
                             <div class="btn-group select-menu-width">
                                 <button data-toggle="dropdown" class="btn btn-primary btn-sm dropdown-toggle"><span class="true_val">全部</span> <span class="caret"></span>
                                 </button>
@@ -71,7 +72,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="fr m-l-lg clearfix">
+                        <div class="fr m-l-md clearfix">
                             <span>门店：</span>
                             <div class="btn-group select-menu-width">
                                 <button data-toggle="dropdown" class="btn btn-primary btn-sm dropdown-toggle"><span class="true_val">全部</span> <span class="caret"></span>
@@ -188,10 +189,18 @@
         <div class="wrapper social-comment">
             <div class="row">
                 <div class="col-sm-10">
-                    <div id="uploader" class="wu-example"></div>
+                    <div class="uploader uploader4">
+                        <div class="wrapper-uploader">
+                            <div class="file-list"></div>
+                        </div>
+                        <div class="actions clearfix">
+                            <div class="filePicker action fl">选择图片</div>
+                            <button class="uploadFile action btn btn-default upload-btn disabled fr">上传图片</button>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-sm-2">
-                    <button style="margin-top: 7px" type="button" class="btn btn-primary btn-sm">提交</button>
+                    <button style="margin-top: 20px" type="button" class="btn btn-primary btn-sm">提交</button>
                 </div>
             </div>
         </div>
@@ -211,40 +220,38 @@
             checkboxClass: 'icheckbox_square-green',
             radioClass: 'iradio_square-green',
         });
+
     });
 </script>
 <!-- radio/checkbox效果需要引入结束 -->
 
 <!-- 弹窗插件 -->
 <script src="../../static/js/plugins/layer/layer.min.js" type="text/javascript"></script>
-<script type="text/javascript">
-    // 已交首期费用弹窗内容
-    var _add_collection_popup = $('.add_collection_popup').html();
-    /*  已交首期费用  */
-    $('#add_collection').on('click', function(){
-        layer.open({
-            title: "添加催收记录",
-            type: 1,
-            area: ['600px', '260px'],
-            skin: 'layui-layer-demo', //样式类名
-            anim: 2,
-            shadeClose: true, //开启遮罩关闭
-            content: _add_collection_popup
-        });
-    });
-</script>
 
-<!-- Web Uploader
-<script type="text/javascript">
-    // 添加全局站点信息
-    var BASE_URL = '../../static/js/plugins/webuploader';
-</script>
-<script src="../../static/js/plugins/webuploader/webuploader.js"></script>
-<script src="../../static/js/demo/webuploader-demo.js"></script>-->
 <!--  日期选择插件start  -->
 <!-- Data picker -->
 <script src="../../static/js/plugins/datapicker/bootstrap-datepicker.js"></script>
 <script src="../../static/js/global-1.1.0.min.js"></script>
 <!--  日期选择插件end  -->
+
+<!-- Web Uploader -->
+<script src="../../static/js/plugins/webuploader/webuploader.min.js"></script>
+<script src="../../static/js/demo/webuploader.support.js"></script>
+<script type="text/javascript">
+    // 已交首期费用弹窗内容
+    var _add_collection_popup = $('.add_collection_popup').html();
+    layuiPopup("add_collection","添加催收记录","600px","auto",_add_collection_popup,function () {
+        var w1 = new WebUploaderSupport({
+            server: "/webuploader-support/webUploader/save?path=webUploader",
+            swf: '../webuploader/Uploader.swf',  // swf文件所处路径
+            support: {
+                uploader: ".uploader.uploader4",
+                fileSize: 1,
+                multiple: false  //单选
+            }
+        });
+    })
+</script>
+
 </body>
 </html>
