@@ -27,7 +27,7 @@
                             <button id="add_role" type="button" class="btn btn-primary">添加角色</button>
                             <button type="button" class="btn btn-success">修改角色</button>
                             <button type="button" class="btn btn-info">删除角色</button>
-                            <button type="button" class="btn btn-warning">角色授权</button>
+                            <button id="authorize_btn" type="button" class="btn btn-warning">角色授权</button>
                         </div>
                     </div>
                     <div class="ibox-content">
@@ -160,6 +160,19 @@
                 content: _add_role_html
             });
         });
+        $('#authorize_btn').on('click', function(){
+            layer.open({
+                type: 2,
+                title: '角色授权',
+                shadeClose: true,
+                shade: 0.8,
+                area: ['700px', '500px'],
+                content: ['role_authorize.html','no'] //iframe的url,no-没有滚动条
+            });
+        });
+    </script>
+    <script>
+
     </script>
     <!--  表单插件  -->
     <!-- jQuery Validation plugin javascript-->

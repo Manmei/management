@@ -172,8 +172,8 @@ function WebUploaderSupport(options) {
         fileList: ".file-list",  //显示文件列表的区域选择器
         log: false,    //是否打印信息
         multiple: true,  //默认多选
-        thumbnailWidth: 600,
-        thumbnailHeight: 350,
+        thumbnailWidth: 180,
+        thumbnailHeight: 180,
         fileSize: -1,  //文件总个数, -1时无限制
         ratio: (function () {
             var result = that.$fns.getBrowser();

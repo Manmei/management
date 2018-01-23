@@ -220,6 +220,13 @@
 </script>
 <!-- radio/checkbox效果需要引入结束 -->
 
+<!--  日期选择插件start  -->
+<script src="../../static/js/plugins/datapicker/bootstrap-datepicker.js"></script>
+<!--  日期选择插件end  -->
+
+<!-- 自定义公共js文件 -->
+<script src="../../static/js/global-1.1.0.min.js"></script>
+
 <!-- 弹窗插件 -->
 <script src="../../static/js/plugins/layer/layer.min.js" type="text/javascript"></script>
 <script type="text/javascript">
@@ -233,7 +240,7 @@
             shadeClose: true,
             shade: 0.8,
             area: ['700px', '500px'],
-            content: 'wail_popup.html' //iframe的url
+            content: ['wail_popup.html','no'] //iframe的url,no-没有滚动条
         });
     });
     // 减免
@@ -244,7 +251,7 @@
             shadeClose: true,
             shade: 0.8,
             area: ['700px', '500px'],
-            content: 'jmian.html' //iframe的url
+            content: ['jmian.html','no'] //iframe的url,no-没有滚动条
         });
     });
     // 划扣
@@ -255,21 +262,16 @@
             shadeClose: true,
             shade: 0.8,
             area: ['700px', '500px'],
-            content: 'huakou.html' //iframe的url
+            content: ['huakou.html','no'] //iframe的url,no-没有滚动条
         });
     });
 </script>
 
-<!--  日期选择插件start  -->
-<script src="../../static/js/plugins/datapicker/bootstrap-datepicker.js"></script>
-<!--  日期选择插件end  -->
-
-<!-- 自定义公共js文件 -->
-<script src="../../static/js/global-1.1.0.min.js"></script>
 <script>
     function fun(){
         alert("这是父页面方法")
     }
 </script>
+
 </body>
 </html>

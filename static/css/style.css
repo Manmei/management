@@ -8005,3 +8005,22 @@ body.skin-3 {
     display: inline-block;
     width: 300px;
 }
+
+/*  登录、重置密码页面css重置  */
+.common-form-style .form-group {
+    position: relative;
+}
+.common-form-style .fa {
+    position: absolute;
+    top: 8px;
+    left: 11px;
+    font-size: 16px;
+}
+.common-form-style .form-control {
+    padding: 6px 12px 6px 32px;
+}
+.verify-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
