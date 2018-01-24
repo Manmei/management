@@ -51,15 +51,12 @@
                             </tr>
                             <tr>
                                 <td colspan="5">
-                                    <div class="page-container">
-                                        <div class="uploader uploader1">
-                                            <div class="wrapper-uploader">
-                                                <div class="file-list clearfix"></div>
-                                            </div>
-                                            <div class="actions clearfix">
-                                                <div class="filePicker action fl">选择图片</div>
-                                                <button class="uploadFile action btn btn-default upload-btn disabled fr">上传图片</button>
-                                            </div>
+                                    <div class="ibox float-e-margins">
+                                        <div class="z_photo upimg-div clear">
+                                            <section class="z_file fl">
+                                                <img src="../../static/img/imgUp/a11.png" class="add-img">
+                                                <input type="file" name="file" class="file" id="file1" value="" accept="image/jpg,image/jpeg,image/png,image/bmp" multiple="">
+                                            </section>
                                         </div>
                                     </div>
                                 </td>
@@ -88,15 +85,12 @@
                             </tr>
                             <tr>
                                 <td colspan="5">
-                                    <div class="page-container">
-                                        <div class="uploader uploader2">
-                                            <div class="wrapper-uploader">
-                                                <div class="file-list clearfix"></div>
-                                            </div>
-                                            <div class="actions clearfix">
-                                                <div class="filePicker action fl">选择图片</div>
-                                                <button class="uploadFile action btn btn-default upload-btn disabled fr">上传图片</button>
-                                            </div>
+                                    <div class="ibox float-e-margins">
+                                        <div class="z_photo upimg-div clear">
+                                            <section class="z_file fl">
+                                                <img src="../../static/img/imgUp/a11.png" class="add-img">
+                                                <input type="file" name="file" class="file" id="file2" value="" accept="image/jpg,image/jpeg,image/png,image/bmp" multiple="">
+                                            </section>
                                         </div>
                                     </div>
                                 </td>
@@ -125,15 +119,12 @@
                             </tr>
                             <tr>
                                 <td colspan="5">
-                                    <div class="page-container">
-                                        <div class="uploader uploader3">
-                                            <div class="wrapper-uploader">
-                                                <div class="file-list clearfix"></div>
-                                            </div>
-                                            <div class="actions clearfix">
-                                                <div class="filePicker action fl">选择图片</div>
-                                                <button class="uploadFile action btn btn-default upload-btn disabled fr">上传图片</button>
-                                            </div>
+                                    <div class="ibox float-e-margins">
+                                        <div class="z_photo upimg-div clear">
+                                            <section class="z_file fl">
+                                                <img src="../../static/img/imgUp/a11.png" class="add-img">
+                                                <input type="file" name="file" class="file" id="file3" value="" accept="image/jpg,image/jpeg,image/png,image/bmp" multiple="">
+                                            </section>
                                         </div>
                                     </div>
                                 </td>
@@ -146,6 +137,14 @@
         </div>
     </div>
 </div>
+
+<!-- 确认删除拖 -->
+<aside class="mask works-mask">
+    <div class="mask-content">
+        <p class="del-p">您确定要删除作品图片吗？</p>
+        <p class="check-p"><span class="del-com wsdel-ok">确定</span><span class="wsdel-no">取消</span></p>
+    </div>
+</aside>
 
 <!-- 全局js -->
 <script src="../../static/js/jquery.min.js?v=2.1.4"></script>
@@ -165,39 +164,9 @@
     });
 </script>
 <!-- radio/checkbox效果需要引入结束 -->
-<!-- Web Uploader -->
-<script src="../../static/js/plugins/webuploader/webuploader.min.js"></script>
-<script src="../../static/js/demo/webuploader.support.js"></script>
-<script type="text/javascript">
-    var w1 = new WebUploaderSupport({
-        server: "/webuploader-support/webUploader/save?path=webUploader",
-        paste: document.body,
-        swf: '../webuploader/Uploader.swf',  // swf文件所处路径
-        support:  {
-            uploader: ".uploader.uploader1",  //上传区域容器选择器
-            fileSize: 20,  //文件总个数, -1时无限制
-            multiple: false  //单选
-        }
 
-    });
-    var w2 = new WebUploaderSupport({
-        server: "/webuploader-support/webUploader/save?path=webUploader",
-        swf: '../webuploader/Uploader.swf',  // swf文件所处路径
-        support: {
-            uploader: ".uploader.uploader2",
-            fileSize: 20,
-            multiple: false  //单选
-        }
-    });
-    var w3 = new WebUploaderSupport({
-        server: "/webuploader-support/webUploader/save?path=webUploader",
-        swf: '../webuploader/Uploader.swf',  // swf文件所处路径
-        support: {
-            uploader: ".uploader.uploader3",
-            fileSize: 20,
-            multiple: false  //单选
-        }
-    });
-</script>
+<!--  上传图片插件  -->
+<script src="../../static/js/demo/imgUp.js"></script>
+
 </body>
 </html>

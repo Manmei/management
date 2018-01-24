@@ -8024,3 +8024,195 @@ body.skin-3 {
     top: 0;
     right: 0;
 }
+
+/*  权限管理树状  */
+.dtree {
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: #666;
+    white-space: nowrap;
+
+}
+.dtree:first-child {
+    padding: 10px 130px;
+}
+.dtree img {
+    border: 0px;
+    vertical-align: middle;
+}
+.dtree>p {
+    font-size: 16px;
+    text-align: center;
+}
+.dtree>.dTreeNode {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.dtree a {
+    color: #333;
+    text-decoration: none;
+}
+.dtree a.node, .dtree a.nodeSel {
+    white-space: nowrap;
+    padding: 1px 2px 1px 2px;
+}
+.dtree a.node:hover, .dtree a.nodeSel:hover {
+    color: #333;
+    text-decoration: underline;
+}
+.dtree a.nodeSel {
+    background-color: #c0d2ec;
+}
+.dtree .clip {
+    overflow: hidden;
+}
+.dTreeNode {
+    font-size: 14px;
+}
+.dTreeNode >img {
+    width: 28px;
+}
+.dTreeNode input {
+    margin-right: 5px;
+    vertical-align: -3px;
+    width: 16px;
+    height: 16px;
+}
+.dTreeNode a img {
+    width: 28px;
+}
+
+/*  上传图片imgUp样式  */
+/*上传图片插件的样式*/
+.img-box{
+    margin-top: 40px;
+}
+.img-box .up-p{
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #555;
+}
+.z_photo{
+    padding: 18px;
+    border:2px dashed #E7E6E6;
+}
+.z_photo .z_file{
+    position: relative;
+}
+.z_file  .file{
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+}
+.z_photo .up-section{
+    position: relative;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.up-section .close-upimg{
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    display: none;
+    z-index: 10;
+}
+.up-section .up-span{
+    display: block;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 9;
+    background: rgba(0,0,0,.5);
+}
+.up-section:hover{
+    border: 2px solid #f15134;
+}
+.up-section:hover .close-upimg{
+    display: block;
+}
+.up-section:hover .up-span{
+    visibility: visible;
+}
+.z_photo .up-img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.loading{
+    border: 1px solid #D1D1D1;
+    background:url(../img/imgUp/loading.gif) no-repeat center;
+}
+.up-opcity{
+    opacity: 0;
+}
+.img-name-p{
+    display: none;
+}
+.upimg-div .up-section {
+    width: 190px;
+    height: 180px;
+}
+.img-box .upimg-div .z_file {
+    width: 190px;
+    height: 180px;
+}
+.z_file .add-img {
+    display: block;
+    width: 190px;
+    height: 180px;
+}
+/*遮罩层样式*/
+.mask{
+    z-index: 1000;
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.4);
+}
+.mask .mask-content{
+    width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -250px;
+    margin-top: -80px;
+    background: white;
+    height: 160px;
+    text-align: center;
+}
+.mask .mask-content .del-p{
+    color: #555;
+    height: 94px;
+    line-height: 94px;
+    font-size: 18px;
+    border-bottom: 1px solid #D1D1D1;
+}
+.mask-content .check-p{
+    height: 66px;
+    line-height: 66px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+}
+.mask-content .check-p span{
+    width: 49%;
+    display:inline-block;
+    text-align: center;
+    color:#d4361d ;
+    font-size: 18px;
+    margin-top: 10px;
+}
+.check-p .del-com{
+    border-right: 1px solid #D1D1D1;
+}

@@ -12,24 +12,47 @@
     <![endif]-->
 
     <link rel="shortcut icon" href="favicon.ico"> <link href="../../static/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
-    <link href="../../static/css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
-    <link href="../../static/css/animate.css" rel="stylesheet">
     <link href="../../static/css/style.css?v=4.1.0" rel="stylesheet">
-    <link href="../../static/css/plugins/iCheck/custom.css" rel="stylesheet">
-    <link href="../../static/css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+    <script type="text/javascript" src="../../static/js/demo/dtree.js"></script>
 </head>
 <body>
-<div class="draw_popup">
-    <form class="role_popup iframe_children m-t" id="">
+    <div class="dtree">
+        <p><a href="javascript:d.closeAll();">全部展开</a> | <a href="javascript:d.openAll();">全部收起</a></p>
 
-    </form>
-</div>
+        <script type="text/javascript">
+            // dTree实例属性以此为：节点ID，父类ID，chechbox的name名称，chechbox的value值，chechbox的显示名称，chechbox是否被选中--默认是不选, chechbox是否可用：默认是可用，节点链接：默认是虚链接
+            d = new dTree('d');
 
-<!--  表单插件  -->
-<!-- jQuery Validation plugin javascript-->
-<script src="../../static/js/plugins/validate/jquery.validate.min.js"></script>
-<script src="../../static/js/plugins/validate/messages_zh.min.js"></script>
-<script src="../../static/js/demo/form-validate-demo.js"></script>
+            d.add(0,-1,'权限管理');
+            d.add(1,0,'authority','0001','日常工作',false,false);
+            d.add(2,1,'authority','0002','新建工作',false,false);
+            d.add(3,2,'authority','0003','人事 ',false,false);
+            d.add(4,2,'authority','0004','财务',false,false);
+            d.add(5,2,'authority','0005','客服',false,false);
+            d.add(15,3,'authority','0006','请假申请',false,false);
+            d.add(16,3,'authority','0007','出差申请',false,false);
+            d.add(17,3,'authority','0008','招聘申请',false,false);
+
+            d.add(6,0,'authority','0012','一级菜单2 ',false,false);
+            d.add(7,6,'authority','0013','二级菜单2 ',false,false);
+            d.add(8,7,'authority','0014','用户管理 ',false,false);
+            d.add(9,7,'authority','0015','用户组管理 ',false,false);
+
+            d.add(11,0,'authority','0016','一级菜单3 ',false,false);
+            d.add(12,11,'authority','0017','二级菜单3 ',false,false);
+            d.add(13,12,'authority','0018','用户管理 ',false,false);
+            d.add(14,12,'authority','0019','用户组管理 ',false,false);
+            d.add(15,13,'authority','0021','用户管理111 ',false,false);
+            d.add(16,13,'authority','0022','用户管理222 ',false,false);
+
+            document.write(d);
+
+            d.openAll();
+        </script>
+
+        <div class="dtree"></div>
+    </div>
+
 
 </body>
 </html>
